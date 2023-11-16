@@ -21,8 +21,7 @@ public class PaymentRequest implements Serializable {
     @Positive(message = "Amount must be greater than zero")
     private double amount;
 
-    //@NotNull(message = "Preferred Gateway is required")
-    @NotBlank
+    @NotBlank(message = "Preferred Gateway is required")
     private String preferredGateway;
 
     @NotNull(message = "Currency is required")
